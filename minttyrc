@@ -1,0 +1,7 @@
+BoldAsFont=yes
+BoldAsColour=no
+CopyAsRTF=yes
+RightClickAction=menu
+Term=xterm-vt220
+BellSound=yes
+BellTaskbar=no
