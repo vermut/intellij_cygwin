@@ -2,9 +2,11 @@
 Integrating Cygwin/Babun as Intellij IDEA Terminal
 
 ## Install babun
- * Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigation to ~/IdeaProjects
-  
-   reg add HKCU\Environment /v HOME /t REG_EXPAND_SZ /d ^%USERPROFILE^%
+
+Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigation to ~/IdeaProjects
+
+    reg add HKCU\Environment /v HOME /t REG_EXPAND_SZ /d ^%USERPROFILE^%
+
  * Install [babun](http://babun.github.io/)
 
 ## Configure babun and environment
