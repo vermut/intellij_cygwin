@@ -15,3 +15,4 @@ Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigati
   	
   	# Tweak mintty to support middle-button paste
   	curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/minttyrc > .minttyrc
+
