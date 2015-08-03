@@ -16,3 +16,12 @@ Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigati
   	# Tweak mintty to support middle-button paste
   	curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/minttyrc > .minttyrc
 
+## Configure PuTTY default settings
+Mostly from [here](https://github.com/jblaine/solarized-and-modern-putty) with middle-button paste and no alt-screen.
+
+    reg import putty-default.reg
+
+
+## Add support for Pageant
+    pact install ssh-pageant
+    echo 'eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")' >> ~/.zshrc
