@@ -1,0 +1,5 @@
+<application>
+    <component name="TerminalOptionsProvider">
+        <option name="myShellPath" value="$MAVEN_REPOSITORY$\..\..\.babun\cygwin\bin\env.exe CHERE_INVOKING=true /bin/zsh -" />
+    </component>
+</application>

@@ -1,6 +1,8 @@
 # intellij_cygwin
 Integrating Cygwin/Babun as Intellij IDEA Terminal
 
+I use it mostly to work with Ansible on Windows
+
 ## Install babun
 
 Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigation to ~/IdeaProjects
@@ -14,14 +16,24 @@ Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigati
     mkpasswd -l -p "$(cygpath -H)" > /etc/passwd
   	
     # Tweak mintty to support middle-button paste
-    curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/minttyrc > .minttyrc
+    curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/minttyrc > ~/.minttyrc
+
+## Use zsh as Terminal replacement for IDEA
+The command is "$MAVEN_REPOSITORY$\..\..\.babun\cygwin\bin\env.exe CHERE_INVOKING=true /bin/zsh -"
+
+I used a rather ugly dependency on MAVEN_REPOSITORY because I couldn't find the way to pass USERPROFILE variable.
+
+    curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/terminal.xml > ~/.IdeaIC15/config/options/terminal.xml
 
 ## Configure PuTTY settings (default and existing sessions)
 Mostly from [here](https://github.com/jblaine/solarized-and-modern-putty) with middle-button paste and no alt-screen.
 
     curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/putty-mass-settings-update.sh | bash
 
-
 ## Add support for Pageant
     pact install ssh-pageant
-    echo 'eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")' >> ~/.zshrc
+    echo 'eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")' >> ~/.babunrc
+
+## Install python-pip and Ansible
+    curl https://bootstrap.pypa.io/get-pip.py | python
+    pip install ansible
