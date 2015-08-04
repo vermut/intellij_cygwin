@@ -11,6 +11,12 @@ Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigati
 
  * Install [babun](http://babun.github.io/)
 
+## Rebase cygwin libraries
+    # Close all cygwin windows and exit all cygwin processes
+    # Start -> Run -> cmd
+    .babun\cygwin\bin\dash.exe
+    /usr/bin/rebaseall -v
+
 ## Configure babun and environment
     # Update /etc/passwd to reflect new HOME
     mkpasswd -l -p "$(cygpath -H)" > /etc/passwd
