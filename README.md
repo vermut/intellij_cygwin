@@ -34,6 +34,14 @@ Mostly from [here](https://github.com/jblaine/solarized-and-modern-putty) with m
     pact install ssh-pageant
     echo 'eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")' >> ~/.babunrc
 
-## Install python-pip and Ansible
+## Install python-pip, Docker and Ansible
     curl https://bootstrap.pypa.io/get-pip.py | python
-    pip install ansible
+    pip install ansible docker-py
+
+## Docker file type for IDEA
+    mkdir ~/.IdeaIC15/config/filetypes
+    wget -O ~/.IdeaIC15/config/filetypes/Dockerfile.xml https://raw.githubusercontent.com/maesgari/docker-intellij-idea/master/Dockerfile.xml
+
+## Install Kitematic and variables for Docker
+    echo 'eval "$(~/AppData/Local/Kitematic/app-*/resources/resources/docker-machine.exe env kitematic --shell bash)"' >> ~/.babunrc
+    ln -s ~/AppData/Local/Kitematic/app-*/resources/resources/docker /usr/bin/docker
