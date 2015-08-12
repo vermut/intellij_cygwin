@@ -31,7 +31,7 @@ unsetopt NOMATCH
 EOF
 
 ## Use zsh as Terminal replacement for IDEA
-The command is "$MAVEN_REPOSITORY$\..\..\.babun\cygwin\bin\env.exe CHERE_INVOKING=true /bin/zsh -"
+The command is "$MAVEN_REPOSITORY$\\..\\..\\.babun\cygwin\bin\env.exe CHERE_INVOKING=true /bin/zsh -"
 
 I used a rather ugly dependency on MAVEN_REPOSITORY because I couldn't find the way to pass USERPROFILE variable.
 
