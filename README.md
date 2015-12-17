@@ -13,8 +13,9 @@ Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigati
 
 ## Rebase cygwin libraries
     # Close all cygwin windows and exit all cygwin processes
-    # Start -> Run 
+    # Start -> Run  (or even as Admin)
     %USERPROFILE%/.babun\cygwin\bin\dash.exe
+    cd /usr/bin/ ; /usr/bin/peflags * -d 1
     /usr/bin/rebaseall -v
 
 ## Configure babun and environment
