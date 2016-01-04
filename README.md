@@ -27,9 +27,9 @@ Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigati
 
     # Make zsh completion a bit like bash
     cat <<EOF >> ~/.zshrc
-setopt BASH_AUTO_LIST AUTO_MENU NOBAD_PATTERN HIST_IGNORE_DUPS
-unsetopt NOMATCH
-EOF
+    setopt BASH_AUTO_LIST AUTO_MENU NOBAD_PATTERN HIST_IGNORE_DUPS
+    unsetopt NOMATCH
+    EOF
 
 ## Use zsh as Terminal replacement for IDEA
 The command is "$MAVEN_REPOSITORY$\\..\\..\\.babun\cygwin\bin\env.exe CHERE_INVOKING=true /bin/zsh -"
