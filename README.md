@@ -37,6 +37,7 @@ The command is "$MAVEN_REPOSITORY$\\..\\..\\.babun\cygwin\bin\env.exe CHERE_INVO
 I used a rather ugly dependency on MAVEN_REPOSITORY because I couldn't find the way to pass USERPROFILE variable.
 
     curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/terminal.xml > ~/.IdeaIC15/config/options/terminal.xml
+    curl https://raw.githubusercontent.com/vermut/intellij_cygwin/master/terminal.xml > ~/.IntelliJIdea16/config/options/terminal.xml
 
 ## Configure PuTTY settings (default and existing sessions)
 Mostly from [here](https://github.com/jblaine/solarized-and-modern-putty) with middle-button paste and no alt-screen.
