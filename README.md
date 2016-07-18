@@ -7,19 +7,21 @@ I use it mostly to work with Ansible/Docker on Windows
 
 Set user environment variable HOME=%USERPROFILE%. You will enjoy better navigation to ~/IdeaProjects
 
-    reg add HKCU\Environment /v HOME /t REG_EXPAND_SZ /d ^%USERPROFILE^%
+    via CMD: reg add HKCU\Environment /v HOME /t REG_EXPAND_SZ /d ^%USERPROFILE^%
+
+    via Run: reg add HKCU\Environment /v HOME /t REG_EXPAND_SZ /d %USERPROFILE%
 
  * Install [babun](http://babun.github.io/)
 
 ## Rebase cygwin libraries
-    # Close all cygwin windows and exit all cygwin processes
+    # Close all cygwin windows and exit all cygwin processes  (probably .babun/rebase.bat does the same)
     # Start -> Run  (or even as Admin)
     %USERPROFILE%/.babun\cygwin\bin\dash.exe
     cd /usr/bin/ ; /usr/bin/peflags * -d 1
     /usr/bin/rebaseall -v
 
 ## Configure babun and environment
-    # Update /etc/passwd to reflect new HOME
+    # Update /etc/passwd to reflect new HOME (check first if it's already there)
     mkpasswd -l -p "$(cygpath -H)" > /etc/passwd
   	
     # Tweak mintty to support middle-button paste
